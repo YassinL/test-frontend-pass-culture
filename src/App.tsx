@@ -1,11 +1,12 @@
 import React from "react";
+import { HomePage } from "./components/pages/HomePage";
 import { GlobalStyle } from "./styles";
 
 
 function App() {
   return (
     <>
-      <div>Hello</div>
+      <HomePage />
       <GlobalStyle />
     </>
   );
