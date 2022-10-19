@@ -1,15 +1,13 @@
-import "./App.css";
-
 import React from "react";
-import logo from "./logo-pass-culture.svg";
+import { GlobalStyle } from "./styles";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <>
+      <div>Hello</div>
+      <GlobalStyle />
+    </>
   );
 }
 
