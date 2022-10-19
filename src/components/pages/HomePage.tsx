@@ -1,11 +1,12 @@
 import React, { useMemo, useState } from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 import { news } from "../../data/news";
 import { Card } from "../molecules/Card";
+import { Select } from "../atom/Select";
 
 import PassCultureLogo from "../atom/SVG/logo-pass-culture.svg";
-import { Select } from "../atom/Select";
 
 export const HomePage = () => {
   const [value, setValue] = useState("Select an option");
@@ -25,7 +26,12 @@ export const HomePage = () => {
 
   return (
     <>
-      <Header><Logo src={PassCultureLogo} alt="Pass Culture Logo" /></Header>
+      <Header>
+        <Logo src={PassCultureLogo} alt="Pass Culture Logo" />
+        <div>
+        {/* <Link to="/create-news-page">Create News</Link> */}
+      </div>
+      </Header>
       <Select
         options={categoryOptionsWithoutDuplicates}
         value={value}
@@ -51,6 +57,8 @@ export const HomePage = () => {
 };
 
 const Header = styled.header`
+display: flex;
+justify-content: space-between;
 height: 10vh;
 margin-bottom: 10px;
 `;
